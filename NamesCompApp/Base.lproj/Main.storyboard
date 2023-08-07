@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -94,5 +95,82 @@
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="wGV-BM-RT2">
+            <objects>
+                <viewController id="iJX-O7-OWc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wYc-zG-hKE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compatibility of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slu-P3-sg4">
+                                <rect key="frame" x="109" y="159" width="175" height="48"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name and Second Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-44-GYu">
+                                <rect key="frame" x="66" y="237" width="261" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xXz-Hr-6Tp">
+                                <rect key="frame" x="46.666666666666657" y="291" width="300" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="A8G-rD-GKj"/>
+                                </constraints>
+                                <color key="progressTintColor" systemColor="systemRedColor"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlG-qp-lWx">
+                                <rect key="frame" x="175.66666666666666" y="315" width="42" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psm-i4-utN">
+                                <rect key="frame" x="126.66666666666669" y="379" width="140" height="50"/>
+                                <color key="backgroundColor" red="0.68363133679999999" green="0.45000566269999998" blue="0.83859967160000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="L22-Il-f1E"/>
+                                    <constraint firstAttribute="height" constant="50" id="gIT-h9-jKX"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go Back">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VFz-6l-bCx"/>
+                        <color key="backgroundColor" red="0.85543533760000001" green="0.85060539749999997" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="xXz-Hr-6Tp" firstAttribute="centerX" secondItem="wYc-zG-hKE" secondAttribute="centerX" id="0vV-xf-bFs"/>
+                            <constraint firstItem="slu-P3-sg4" firstAttribute="top" secondItem="VFz-6l-bCx" secondAttribute="top" constant="100" id="3GR-ZZ-IRj"/>
+                            <constraint firstItem="psm-i4-utN" firstAttribute="centerX" secondItem="wYc-zG-hKE" secondAttribute="centerX" id="EXA-DG-KB6"/>
+                            <constraint firstItem="WbK-44-GYu" firstAttribute="centerX" secondItem="wYc-zG-hKE" secondAttribute="centerX" id="TC4-jd-EcB"/>
+                            <constraint firstItem="GlG-qp-lWx" firstAttribute="centerX" secondItem="wYc-zG-hKE" secondAttribute="centerX" id="hWK-4i-mFh"/>
+                            <constraint firstItem="xXz-Hr-6Tp" firstAttribute="top" secondItem="WbK-44-GYu" secondAttribute="bottom" constant="30" id="hfR-XT-9NY"/>
+                            <constraint firstItem="slu-P3-sg4" firstAttribute="centerX" secondItem="wYc-zG-hKE" secondAttribute="centerX" id="nov-kY-Y5z"/>
+                            <constraint firstItem="WbK-44-GYu" firstAttribute="top" secondItem="slu-P3-sg4" secondAttribute="bottom" constant="30" id="qU9-H3-fYI"/>
+                            <constraint firstItem="psm-i4-utN" firstAttribute="top" secondItem="GlG-qp-lWx" secondAttribute="bottom" constant="40" id="xoL-wF-MwC"/>
+                            <constraint firstItem="GlG-qp-lWx" firstAttribute="top" secondItem="xXz-Hr-6Tp" secondAttribute="bottom" constant="20" id="zJu-8t-Ufc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5aU-pO-70z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="4"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
