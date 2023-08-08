@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NamesCompApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="NamesCompApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,6 +76,9 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showResultButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="i3t-12-tg7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -90,46 +93,51 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="neR-u5-xHm" secondAttribute="trailing" constant="20" id="kug-9V-5dz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="partnersNameTF" destination="vNT-7Z-hJJ" id="M6j-uS-OZN"/>
+                        <outlet property="yourNameTF" destination="Ee8-v1-hTk" id="16g-kb-XrG"/>
+                        <segue destination="iJX-O7-OWc" kind="show" identifier="go2Result" id="V6u-hZ-hvp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="wGV-BM-RT2">
             <objects>
-                <viewController id="iJX-O7-OWc" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="iJX-O7-OWc" customClass="ResultViewController" customModule="NamesCompApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wYc-zG-hKE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compatibility of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slu-P3-sg4">
-                                <rect key="frame" x="109" y="159" width="175" height="48"/>
+                                <rect key="frame" x="109" y="100" width="175" height="48"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name and Second Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-44-GYu">
-                                <rect key="frame" x="66" y="237" width="261" height="24"/>
+                                <rect key="frame" x="66" y="178" width="261" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xXz-Hr-6Tp">
-                                <rect key="frame" x="46.666666666666657" y="291" width="300" height="4"/>
+                                <rect key="frame" x="46.666666666666657" y="232" width="300" height="4"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="A8G-rD-GKj"/>
                                 </constraints>
                                 <color key="progressTintColor" systemColor="systemRedColor"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlG-qp-lWx">
-                                <rect key="frame" x="175.66666666666666" y="315" width="42" height="24"/>
+                                <rect key="frame" x="175.66666666666666" y="256" width="42" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psm-i4-utN">
-                                <rect key="frame" x="126.66666666666669" y="379" width="140" height="50"/>
+                                <rect key="frame" x="126.66666666666669" y="320" width="140" height="50"/>
                                 <color key="backgroundColor" red="0.68363133679999999" green="0.45000566269999998" blue="0.83859967160000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="L22-Il-f1E"/>
@@ -162,6 +170,12 @@
                             <constraint firstItem="GlG-qp-lWx" firstAttribute="top" secondItem="xXz-Hr-6Tp" secondAttribute="bottom" constant="20" id="zJu-8t-Ufc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Bx3-95-0aU"/>
+                    <connections>
+                        <outlet property="namesLabel" destination="WbK-44-GYu" id="B62-8F-wfz"/>
+                        <outlet property="progressView" destination="xXz-Hr-6Tp" id="czY-Vg-KHs"/>
+                        <outlet property="resultLabel" destination="GlG-qp-lWx" id="ygP-Cd-GFB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aU-pO-70z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
