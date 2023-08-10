@@ -28,7 +28,6 @@ class ResultViewController: UIViewController {
         
         progressView.progress = Float(resultValue) / 100
         progressView.transform = progressView.transform.scaledBy(x: 1, y: 4)
-    
     }
     
     private func findValue (for name: String) -> Int {
@@ -53,7 +52,7 @@ class ResultViewController: UIViewController {
             case "f", "p":
                 count += 8
                 
-        default:
+            default:
                 count += 0
             }
         }

@@ -8,7 +8,7 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    
     @IBOutlet var yourNameTF: UITextField!
     @IBOutlet var partnersNameTF: UITextField!
     
@@ -17,25 +17,21 @@ class FirstViewController: UIViewController {
         destinationVC.firstName = yourNameTF.text
         destinationVC.secondName = partnersNameTF.text
     }
-
+    
     @IBAction func showResultButton() {
         guard let firstName = yourNameTF.text,
-                let secondName = partnersNameTF.text else { return }
+              let secondName = partnersNameTF.text else { return }
         if firstName.isEmpty || secondName.isEmpty {
             showAlert(title: "Names are missing", message: "Please enter both names😥")
             return
         }
-        
-        
         performSegue(withIdentifier: "go2Result", sender: nil)
-        
     }
     
     @IBAction func unwindSegueToFirstVC(segue: UIStoryboardSegue) {
         yourNameTF.text = ""
         partnersNameTF.text = ""
     }
-
 }
 
 extension FirstViewController {
@@ -62,5 +58,4 @@ extension FirstViewController: UITextFieldDelegate{
         }
         return true
     }
-    
 }
